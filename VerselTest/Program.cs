@@ -12,7 +12,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => Results.Ok("Hello World!"));
+app.MapGet("/", () => Results.Json(new { message = "API works!" })); 
 app.MapGet("/health", () => Results.Ok("I'm alive!"))
 .WithName("health");
 
