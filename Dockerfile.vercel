@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Копируем файл проекта из подпапки
-COPY VercelTest.csproj ./
+COPY VerselTest.csproj ./
 RUN dotnet restore
 
 # Копируем исходный код из подпапки
@@ -15,4 +15,4 @@ COPY --from=build /app/publish ./
 
 
 ENV PORT=80 DOTNET_EnableDiagnostics=0
-ENTRYPOINT ["dotnet", "VercelTest.dll"]
+ENTRYPOINT ["dotnet", "VerselTest.dll"]
