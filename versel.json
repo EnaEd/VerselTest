@@ -2,11 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "api": {
-      "root": "VercelTest",
-      "entrypoint": "../Dockerfile.vercel",
+      "root": ".",
+      "entrypoint": "Dockerfile.vercel",
       "runtime": "container"
     }
-  ],
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": { "service": "api" } }
   ]
